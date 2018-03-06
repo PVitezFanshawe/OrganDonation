@@ -1,8 +1,25 @@
-<template>
+<!--<template>
   <div id="app">
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
     <a href="https://www.youtube.com/watch?v=nyJSd6V2DRI&list=PL55RiY5tL51p-YU-Uw90qQH419BM4Iz07">Here's a solid Vue tutorial</a>
+    <app-header></app-header>
+  </div>
+</template>-->
+
+<template>
+  <div id="app">
+    <h1 class="hide">Organ Donation</h1>
+    <!--Insert vue components here as shown-->
+    <app-header></app-header>
+    <app-donor></app-donor>
+    <app-companies></app-companies>
+    <app-info></app-info>
+    <app-stats></app-stats>
+    <app-story></app-story>
+    <app-faq></app-faq>
+    <app-footer></app-footer>
+
   </div>
 </template>
 
@@ -18,30 +35,15 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
 }
 
-h1, h2 {
-  font-weight: normal;
+p {
+  font-family: 'Roboto', sans-serif;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
+.hide {
+  display: none;
 }
 </style>
