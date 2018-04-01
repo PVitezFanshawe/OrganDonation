@@ -1,31 +1,28 @@
 <template>
 <v-layout column>
     <v-flex xs6 offset-xs3>
-      <div class="white elevation-2">
-        <v-toolbar flat dense class="red" dark>
-          <v-toolbar-title>Register</v-toolbar-title>
-        </v-toolbar>
-        <div class="pl-4 pr-4 pt-2 pb-2">
-          <v-text-field v-model="email" label="Email:"></v-text-field>
-          <v-text-field v-model="password" label="Password:"></v-text-field>
+      <panel title="Sign Up">
+          <form name="cms-register" autocomplete="off">
+            <v-text-field v-model="email" label="Email:"></v-text-field>
+            <v-text-field v-model="password" label="Password:" type="password" autocomplete="new-password"></v-text-field>
+          </form>
             <br>
           <div class="error" v-html="error"/>
             <br>
           <v-btn class="red" @click="register">Register</v-btn>
-        </div>
-      </div>
+        </panel>
     </v-flex>
 </v-layout>
 </template>
 
 <script>
 import auth from '@/services/auth'
-import cmsheader from '@/components/cms-header.vue'
+import panel from '@/components/panel'
 export default {
-  components: {
-    cmsheader
-  },
   name: 'register',
+  components: {
+    panel
+  },
   data () {
     return {
       email: '',
@@ -36,10 +33,12 @@ export default {
   methods: {
     async register () {
       try {
-        await auth.register({
+        const response = await auth.register({
           email: this.username,
           password: this.password
         })
+        this.$store.dispatch('setToken', response.data.token)
+        this.$store.dispatch('setUser', response.data.user)
       } catch (error) {
         this.error = error.response.data.error
       }

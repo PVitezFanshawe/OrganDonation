@@ -30,7 +30,7 @@
   </section>
 </template>
 
-<style lang="scss">
+<style>
 #story-title {
   text-align: center;
 }

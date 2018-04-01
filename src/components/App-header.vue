@@ -1,5 +1,5 @@
 <template>
-  <header class="container">
+  <header class="container-fluid">
     <div class="row">
       <a id="logo" class="col-6">donate<span class="logo-red">date</span>night.ca</a>
       <div class="col-6" id="nav">
@@ -35,6 +35,28 @@
 
 #nav img:hover {
   cursor: pointer;
+}
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #logo {
+    font-size: 29px;
+  }
+
+  #nav img {
+    height: 40.52px;
+    width: 40.52px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
 }
 
 </style>

@@ -5,6 +5,8 @@ import cmspage from '@/components/cmspage'
 import BootstrapVue from 'bootstrap-vue'
 import register from '@/components/register.vue'
 import login from '@/components/login.vue'
+import stories from '@/components/stories.vue'
+import createStory from '@/components/createStory.vue'
 
 Vue.use(Router)
 Vue.use(BootstrapVue)
@@ -30,6 +32,16 @@ export default new Router({
           name: 'login',
           path: 'login',
           component: login
+        },
+        {
+          name: 'stories',
+          path: 'stories',
+          component: stories
+        },
+        {
+          name: 'createStory',
+          path: 'addStory',
+          component: createStory
         }
       ]
     }
