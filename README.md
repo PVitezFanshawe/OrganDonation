@@ -2,11 +2,30 @@
 
 > Donate Date Night - Donation page
 
+## Magnificent 5
+
+* Chantel Oatman - Project Manager
+* William Metcalfe - Desginer
+* Stewart McGowan - Motion Designer
+* Aiden Lee - Front-End Web Dev
+* Peter Vitez - Back-End Web Dev
+
+
 ## Build Setup
 
 ``` bash
 # install dependencies
 npm install
+
+#Switch to server and install dependencies
+cd server;
+npm install
+
+#Start server
+npm start
+
+#Switch back to root
+cd ../
 
 # serve with hot reload at localhost:8080
 npm run dev
