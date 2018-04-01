@@ -23,13 +23,5 @@ p {
 .hide {
   display: none;
 }
-.input-group--text-field input {
-  border-bottom: 1px solid #333333;
-}
-.toolbar__title {
-  color: white;
-}
-.btn__content {
-  color: white;
-}
+
 </style>

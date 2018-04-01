@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import mainpage from '@/components/mainpage'
-import register from '@/components/register'
+import cmspage from '@/components/cmspage'
 import BootstrapVue from 'bootstrap-vue'
+import register from '@/components/register.vue'
+import login from '@/components/login.vue'
 
 Vue.use(Router)
 Vue.use(BootstrapVue)
@@ -15,9 +17,21 @@ export default new Router({
       component: mainpage
     },
     {
-      path: '/register',
-      name: 'register',
-      component: register
+      path: '/ContentManager',
+      name: 'cmspage',
+      component: cmspage,
+      children: [
+        {
+          name: 'register',
+          path: 'register',
+          component: register
+        },
+        {
+          name: 'login',
+          path: 'login',
+          component: login
+        }
+      ]
     }
   ]
 })
