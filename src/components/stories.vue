@@ -3,7 +3,7 @@
     <v-flex xs6 offset-xs3>
       <panel title="Stories">
      @click="navigateTo=({name: 'createStory'})"
-          <v-btn slot="action" class="red accent-2" @click="navigateTo=({name: 'createStory'})" light medium right bottom fab>
+          <v-btn slot="action" class="red accent-2" @click="navigateTo=({name: 'createStory'})" light medium right middle fab>
             <v-icon>add</v-icon>
           </v-btn>
 
