@@ -1,12 +1,3 @@
-<!--<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <a href="https://www.youtube.com/watch?v=nyJSd6V2DRI&list=PL55RiY5tL51p-YU-Uw90qQH419BM4Iz07">Here's a solid Vue tutorial</a>
-    <app-header></app-header>
-  </div>
-</template>-->
-
 <template>
   <div id="app">
     <h1 class="hide">Organ Donation</h1>
@@ -19,7 +10,6 @@
     <app-story></app-story>
     <app-faq></app-faq>
     <app-footer></app-footer>
-
   </div>
 </template>
 
@@ -28,7 +18,7 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Donate Date Night'
+      msg: 'Donate Date Night',
     }
   }
 }
@@ -45,5 +35,13 @@ p {
 
 .hide {
   display: none;
+}
+
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 </style>
