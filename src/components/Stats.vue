@@ -34,7 +34,7 @@ posts from our Donor Date Night events</li>
   </section>
 </template>
 
-<style lang="scss">
+<style >
 #stats-title h2 {
   font-size: 27px;
   font-weight: bold;

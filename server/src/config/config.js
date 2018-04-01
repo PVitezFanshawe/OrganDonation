@@ -9,5 +9,8 @@ module.exports = {
       host: process.env.HOST || 'localhost',
       storage: './organdonation.sqlite'
     }
+  },
+  authentication: {
+    jwtSecret: process.eventNames.JTW_SECRET || 'secret'
   }
 }
