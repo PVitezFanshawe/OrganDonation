@@ -1,6 +1,7 @@
 const authenticationController = require('./controllers/authenticationController')
 const authenticationControllerPolicy = require('./policies/authenticationControllerPolicy')
 const storiesController = require('./controllers/storiesController')
+const companiesController = require('./controllers/companiesController')
 
 module.exports = (app) => {
   app.post('/register',
@@ -14,4 +15,9 @@ module.exports = (app) => {
     storiesController.index)
   app.post('/stories',
     storiesController.post)
+
+  app.get('/companies',
+    companiesController.index)
+  app.post('/companies',
+    companiesController.post)
 }

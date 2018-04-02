@@ -1,6 +1,6 @@
 <template>
 <v-layout column>
-    <v-flex xs6 offset-xs3>
+    <v-flex xs6 offset-xs3 cms-panel>
       <panel title="Sign Up">
           <form name="cms-register" autocomplete="off">
             <v-text-field v-model="email" label="Email:"></v-text-field>
@@ -9,7 +9,7 @@
             <br>
           <div class="error" v-html="error"/>
             <br>
-          <v-btn class="red" @click="register">Register</v-btn>
+          <v-btn class="red" @click="register" dark>Register</v-btn>
         </panel>
     </v-flex>
 </v-layout>

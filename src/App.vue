@@ -23,5 +23,7 @@ p {
 .hide {
   display: none;
 }
-
+.cms-panel{
+  margin-top: 100px;
+}
 </style>

@@ -2,7 +2,6 @@
   <div class="white elevation-2">
         <v-toolbar flat dense class="red" dark>
           <v-toolbar-title>{{ title }}</v-toolbar-title>
-          <slot name="action"></slot>
 
         </v-toolbar>
 

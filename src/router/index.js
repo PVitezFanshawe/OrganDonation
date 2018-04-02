@@ -7,6 +7,8 @@ import register from '@/components/register.vue'
 import login from '@/components/login.vue'
 import stories from '@/components/stories.vue'
 import createStory from '@/components/createStory.vue'
+import companies from '@/components/cms-companies.vue'
+import createCompany from '@/components/cms-createCompany.vue'
 
 Vue.use(Router)
 Vue.use(BootstrapVue)
@@ -39,9 +41,19 @@ export default new Router({
           component: stories
         },
         {
-          name: 'createStory',
-          path: 'addStory',
+          name: 'addstory',
+          path: 'addstory',
           component: createStory
+        },
+        {
+          name: 'companies',
+          path: 'companies',
+          component: companies
+        },
+        {
+          name: 'addcompany',
+          path: 'addcompany',
+          component: createCompany
         }
       ]
     }
