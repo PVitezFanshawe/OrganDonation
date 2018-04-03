@@ -40,6 +40,9 @@ export default {
       } catch (error) {
         this.error = error.response.data.error
       }
+    },
+    navigateTo (route) {
+      this.$router.push(route)
     }
   }
 }

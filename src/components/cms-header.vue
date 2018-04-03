@@ -18,7 +18,7 @@
     </v-toolbar-items>
 
     <v-toolbar-items>
-        <v-btn v-if="!$store.state.isUserLoggedIn" flat dark @click="navigateTo({name:'register'})">
+        <v-btn v-if="$store.state.isUserLoggedIn" flat dark @click="navigateTo({name:'register'})">
             Create New User
         </v-btn>
     </v-toolbar-items>

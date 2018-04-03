@@ -9,7 +9,7 @@
           <v-layout>
             <v-flex xs6>
               <router-link :to="{ name:'sinlgeStory', params: {storyId: story.id}}">
-                <h4 class="cms-edit-button">Edit Story</h4>
+                <h4 class="cms-edit-button">See More</h4>
               </router-link>
               <div class="story-name">
                 {{ story.name }}

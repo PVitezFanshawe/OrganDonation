@@ -2,32 +2,11 @@
   <section class="container-fluid">
     <div class="row">
       <div id="companies-images" class="col-12 scrollmenu">
-        <a><img src="../assets/covent.png" alt="covent garden market"></a>
-        <a><img src="../assets/cineplex.png" alt="cineplex"></a>
-        <a><img src="../assets/budgardens.png" alt="budweiser gardens"></a>
-        <a><img src="../assets/keg.png" alt="keg"></a>
-        <a><img src="../assets/lq.png" alt="lasor quest"></a>
-        <a><img src="../assets/junction.png" alt="junction"></a>
-        <a><img src="../assets/eastpark.png" alt="east park"></a>
-        <a><img src="../assets/eastside.png" alt="east sides"></a>
-        <a><img src="../assets/foxfiddle.png" alt="fox fiddle"></a>
-        <a><img src="../assets/lmh.png" alt="london music hall"></a>
-        <a><img src="../assets/landmark.png" alt="landmark"></a>
-        <a><img src="../assets/masonville.png" alt="masonville"></a>
-        <a><img src="../assets/mandarin.png" alt="mandarin"></a>
-        <a><img src="../assets/mcabes.png" alt="mcabes"></a>
-        <a><img src="../assets/milos.png" alt="milos"></a>
-        <a><img src="../assets/morissey.png" alt="morissey"></a>
-        <a><img src="../assets/olg.png" alt="olg"></a>
-        <a><img src="../assets/stobies.png" alt="stobies"></a>
-        <a><img src="../assets/tastingroom.png" alt="tasting room"></a>
-        <a><img src="../assets/whiteoaks.png" alt="whiteoaks"></a>
-        <a><img src="../assets/toboggan.png" alt="toboggan"></a>
-        <a><img src="../assets/sakata.png" alt="sakata"></a>
+        <a  v-for="company in companies" :key="company.id"> <img  @click="lightbox = !lightbox" :src="'../static/' + company.logo" :alt="company.name"> </a>
       </div>
       <div class="lightbox col-12">
         <span class="close-lightbox">x</span>
-        <div id="lightbox-cont">
+        <div v-if="lightbox" id="lightbox-cont">
           <h2>Covent Garden Market: Voucher for two</h2>
           <h2>Bring your donor card and recieve a complimentary voucher for two to spend at the Covent Garden Market.</h2>
           <img src="../assets/covent.png" alt="covent garden market">
@@ -41,11 +20,21 @@
 </template>
 
 <script>
-// Variables
+import companiesServ from '@/services/companiesServ'
+export default {
+  data () {
+    return {
+      companies: null,
+      lightbox: false
+    }
+  },
+  methods: {
 
-// Functions
-
-// Events
+  },
+  async mounted () {
+    this.companies = (await companiesServ.index()).data
+  }
+}
 </script>
 
 <style lang="scss">

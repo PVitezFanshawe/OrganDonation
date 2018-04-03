@@ -90,7 +90,7 @@
               <br>
               <input type="text" name="firstname" class="input-text">
               <br>
-              <label>Email (optional):</label>
+              <label>Email:</label>
               <br>
               <input type="text" name="email" class="input-text">
               <br>
@@ -111,19 +111,17 @@
             <hr>
           </div>
         </div>
-      </div>
-    </div>
   </section>
 </template>
 
 <script>
-//always include this as syntax under created write js. (var funct listnr)
+// always include this as syntax under created write js. (var funct listnr)
 // for returning text make object follow syntax then after closing curly brace of object put a comma and then add js functions after that.
-  export default {
-    created:{
+export default {
+  created: {
 
-    }
   }
+}
 </script>
 
 <style>
@@ -180,9 +178,6 @@ video {
   cursor: pointer;
   box-shadow: 0 6px #650909;
 }
-
-
-
 
 #story-pages {
   margin-top: 30px;

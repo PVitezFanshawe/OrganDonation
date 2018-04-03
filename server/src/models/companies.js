@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Story = sequelize.define('Story', {
+  const Company = sequelize.define('Company', {
     name: DataTypes.STRING,
     desc: DataTypes.TEXT,
     link: DataTypes.STRING,
@@ -7,5 +7,5 @@ module.exports = (sequelize, DataTypes) => {
     logo: DataTypes.STRING,
     quote: DataTypes.STRING
   })
-  return Story
+  return Company
 }
