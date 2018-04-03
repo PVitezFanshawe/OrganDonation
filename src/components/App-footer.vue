@@ -16,6 +16,10 @@
         <img src="../assets/youtube.png" alt="youtube">
       </div>
 
+      <div id="trillium" class="col-12">
+        <a href="https://www.giftoflife.on.ca/en/">Click here to visit Trillium Gift of Life</a>
+      </div>
+
     </div>
   </footer>
 </template>
@@ -59,11 +63,28 @@
 
 #foot-social-media img {
   width: 59.06px;
-  margin-right: 17px;
+  margin-right: 10px;
+  margin-left: 10px;
   cursor: pointer;
 }
 
-// Medium devices (tablets, 768px and up)
+#trillium {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#trillium a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#trillium a:hover {
+  color: #333;
+}
+
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
   #foot-title h2 {
@@ -78,13 +99,19 @@
   #foot-social-media img {
     width: 86.8px;
     margin-right: 25px;
-
   }
 }
 
-// Large devices (desktops, 992px and up)
+/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  #foot-title h2 {
+    font-size: 40px;
+    padding: 35px 40px 35px 40px;
+  }
 
+  #foot-bttn a {
+    font-size: 35px;
+  }
 }
 
 </style>

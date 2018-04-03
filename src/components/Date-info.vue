@@ -1,30 +1,33 @@
 <template>
   <section class="container-fluid">
     <div id="date-info-cont" class="row">
-      <div id="info" class="col-12">
+      <div id="info" class="col-12 col-lg-10 col-lg-offset-1">
         <h2>#DonateDateNight</h2>
         <p>Donate Date Night allows for Organ Donors to recieve awesome rewards! It's simple - Come visit us at our monthly events and show us your donor card, and recieve amazing discounts and special deals.</p>
         <p>If you are not an Organ Donor, the process is simple, and only takes two minutes; All you need is your health card. </p>
       </div>
-      <div id="details" class="col-12 col-lg-7">
+
+      <div id="details" class="col-12 col-lg-10 col-lg-offset-1">
         <h4><span class="details-bold">Current Event:</span> Movie Tickets For Two</h4>
         <h4><span class="details-bold">Where:</span> Saturday, April 28, 2018 @ 7:00 PM</h4>
         <h4><span class="details-bold">Time:</span> 7:00pm ET</h4>
       </div>
-      <div id="info-donor-bttn" class="col-12 col-md-6 col-lg-5">
+
+      <div id="info-donor-bttn" class="col-12 col-md-6">
         <a href="#">Become A Donor</a>
       </div>
+
       <div id="socialMedia" class="col-12 col-md-6 ">
-        <img src="../assets/twitter-red.png" alt="twitter">
-        <img src="../assets/instagram-red.png" alt="instagram">
-        <img src="../assets/facebook-red.png" alt="facebook">
-        <img src="../assets/youtube-red.png" alt="youtube">
+        <img src="../assets/twitter.png" alt="twitter">
+        <img src="../assets/instagram.png" alt="instagram">
+        <img src="../assets/facebook.png" alt="facebook">
+        <img src="../assets/youtube.png" alt="youtube">
       </div>
     </div>
   </section>
 </template>
 
-<style>
+<style lang="scss">
 #date-info-cont {
   background: url('../assets/datenight_img_mobile.png') no-repeat;
   background-position: center;
@@ -67,7 +70,6 @@
 }
 
 #info-donor-bttn a {
-  padding: 55px 30px 55px 30px;
   background-color: #B11010;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
@@ -84,17 +86,15 @@
 
 #socialMedia {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 60px;
+  margin-bottom:40px;
 }
 
 #socialMedia img {
-  width: 85px;
+  width: 59.06px;
+  margin-right: 10px;
+  margin-left: 10px;
   cursor: pointer;
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -116,6 +116,14 @@
     line-height: 24px;
   }
 
+  #info-donor-bttn {
+    margin-top: 50px;
+  }
+
+  #info-donor-bttn a {
+    padding: 30px 45px 30px 45px;
+  }
+
   #details {
     margin-top: 30px;
     font-family: 'Roboto', sans-serif;
@@ -124,6 +132,11 @@
 
   #details h4 {
     margin-top:20px;
+  }
+
+  #socialMedia {
+    margin-top: 40px;
+    margin-bottom: 60px;
   }
 
 }

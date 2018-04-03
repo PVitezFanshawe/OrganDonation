@@ -8,6 +8,22 @@
         <a><img src="../assets/keg.png" alt="keg"></a>
         <a><img src="../assets/lq.png" alt="lasor quest"></a>
         <a><img src="../assets/junction.png" alt="junction"></a>
+        <a><img src="../assets/eastpark.png" alt="east park"></a>
+        <a><img src="../assets/eastside.png" alt="east sides"></a>
+        <a><img src="../assets/foxfiddle.png" alt="fox fiddle"></a>
+        <a><img src="../assets/lmh.png" alt="london music hall"></a>
+        <a><img src="../assets/landmark.png" alt="landmark"></a>
+        <a><img src="../assets/masonville.png" alt="masonville"></a>
+        <a><img src="../assets/mandarin.png" alt="mandarin"></a>
+        <a><img src="../assets/mcabes.png" alt="mcabes"></a>
+        <a><img src="../assets/milos.png" alt="milos"></a>
+        <a><img src="../assets/morissey.png" alt="morissey"></a>
+        <a><img src="../assets/olg.png" alt="olg"></a>
+        <a><img src="../assets/stobies.png" alt="stobies"></a>
+        <a><img src="../assets/tastingroom.png" alt="tasting room"></a>
+        <a><img src="../assets/whiteoaks.png" alt="whiteoaks"></a>
+        <a><img src="../assets/toboggan.png" alt="toboggan"></a>
+        <a><img src="../assets/sakata.png" alt="sakata"></a>
       </div>
       <div class="lightbox col-12">
         <span class="close-lightbox">x</span>
@@ -32,7 +48,7 @@
 // Events
 </script>
 
-<style >
+<style lang="scss">
 
 #lightbox-cont {
   margin-top: 80px;
@@ -85,7 +101,7 @@
 .show-lightbox { display: block; }
 
 #companies-images {
-  height: 165px;
+  height: 135px;
   background-color: #fff;
 }
 
@@ -99,6 +115,12 @@
     color: white;
     padding: 0px;
     text-decoration: none;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.scrollmenu a:hover {
+  opacity: 1;
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -108,7 +130,7 @@
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   #companies-images {
-    height: 260px;
+    height: 135px;
   }
 }
 
