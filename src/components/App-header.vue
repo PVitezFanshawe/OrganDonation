@@ -9,7 +9,7 @@
   </header>
 </template>
 
-<style>
+<style lang="scss">
 #logo {
   font-size: 19px;
   font-weight: bold;
@@ -56,7 +56,14 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  #logo {
+    font-size: 35px;
+  }
 
+  #nav img {
+    height: 45px;
+    width: 45px;
+  }
 }
 
 </style>

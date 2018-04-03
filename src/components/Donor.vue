@@ -31,7 +31,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #donate {
   background: url('../assets/main_img_tablet.png') no-repeat;
   text-align: center;
@@ -62,7 +62,6 @@ export default {
 
 #bttn:hover {
   text-decoration: none;
-  color: #ccc;
 }
 
 #promo-text-donate h3{
@@ -120,6 +119,12 @@ export default {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  #donateText h2 {
+    font-size: 39px;
+  }
 
+  #promotext h3 {
+    font-size: 27px;
+  }
 }
 </style>
