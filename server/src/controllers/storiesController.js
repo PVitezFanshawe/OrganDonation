@@ -13,6 +13,16 @@ module.exports = {
       })
     }
   },
+  async show (req, res) {
+    try {
+      const story = await Story.findById(req.params.stroyId)
+      res.send(story)
+    } catch (err) {
+      res.status(500).send({
+        error: 'An error has occured trying to fetch the stories.'
+      })
+    }
+  },
   async post (req, res) {
     try {
       const story = await Story.create(req.body)

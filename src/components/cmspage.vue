@@ -11,7 +11,7 @@
 
 <script>
 import cmsheader from '@/components/cms-header.vue'
-import register from '@/components/register.vue'
+import register from '@/components/cms-register.vue'
 export default {
   components: {
     cmsheader,

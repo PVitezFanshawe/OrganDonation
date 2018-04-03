@@ -65,4 +65,11 @@ margin-top: 40px;
     margin-right: 25px
   }
 }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #qA p {
+    font-size: 18px;
+  }
+}
 </style>

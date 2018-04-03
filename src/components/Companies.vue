@@ -2,16 +2,11 @@
   <section class="container-fluid">
     <div class="row">
       <div id="companies-images" class="col-12 scrollmenu">
-        <a><img src="../assets/covent.png" alt="covent garden market"></a>
-        <a><img src="../assets/cineplex.png" alt="cineplex"></a>
-        <a><img src="../assets/budgardens.png" alt="budweiser gardens"></a>
-        <a><img src="../assets/keg.png" alt="keg"></a>
-        <a><img src="../assets/lq.png" alt="lasor quest"></a>
-        <a><img src="../assets/junction.png" alt="junction"></a>
+        <a  v-for="company in companies" :key="company.id"> <img  @click="lightbox = !lightbox" :src="'../static/' + company.logo" :alt="company.name"> </a>
       </div>
       <div class="lightbox col-12">
         <span class="close-lightbox">x</span>
-        <div id="lightbox-cont">
+        <div v-if="lightbox" id="lightbox-cont">
           <h2>Covent Garden Market: Voucher for two</h2>
           <h2>Bring your donor card and recieve a complimentary voucher for two to spend at the Covent Garden Market.</h2>
           <img src="../assets/covent.png" alt="covent garden market">
@@ -25,14 +20,24 @@
 </template>
 
 <script>
-// Variables
+import companiesServ from '@/services/companiesServ'
+export default {
+  data () {
+    return {
+      companies: null,
+      lightbox: false
+    }
+  },
+  methods: {
 
-// Functions
-
-// Events
+  },
+  async mounted () {
+    this.companies = (await companiesServ.index()).data
+  }
+}
 </script>
 
-<style >
+<style lang="scss">
 
 #lightbox-cont {
   margin-top: 80px;
@@ -85,7 +90,7 @@
 .show-lightbox { display: block; }
 
 #companies-images {
-  height: 165px;
+  height: 135px;
   background-color: #fff;
 }
 
@@ -99,6 +104,12 @@
     color: white;
     padding: 0px;
     text-decoration: none;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.scrollmenu a:hover {
+  opacity: 1;
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -108,7 +119,7 @@
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   #companies-images {
-    height: 260px;
+    height: 135px;
   }
 }
 

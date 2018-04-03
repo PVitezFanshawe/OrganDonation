@@ -1,4 +1,4 @@
-# organ
+# Organ Donation
 
 > Donate Date Night - Donation page
 
@@ -16,16 +16,6 @@
 ``` bash
 # install dependencies
 npm install
-
-#Switch to server and install dependencies
-cd server;
-npm install
-
-#Start server
-npm start
-
-#Switch back to root
-cd ../
 
 # serve with hot reload at localhost:8080
 npm run dev
@@ -45,5 +35,15 @@ npm run e2e
 # run all tests
 npm test
 ```
+## Server Setup
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+``` bash
+#Switch to server and install dependencies (from Root)
+cd server;
+npm install
+
+#Start server
+npm start
+
+```
+
