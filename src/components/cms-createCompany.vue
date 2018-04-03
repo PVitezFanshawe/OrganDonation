@@ -15,7 +15,7 @@
   </v-layout>
 </template>
 <script>
-import panel from '@/components/panel'
+import panel from '@/components/cms-panel'
 import storiesServ from '@/services/storiesServ'
 export default {
   data () {

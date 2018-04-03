@@ -1,24 +1,27 @@
 <template>
   <v-layout column>
     <v-flex xs6 offset-xs3 cms-panel>
-      <panel title="Stories">
-        <router-link :to="{name: 'addstory'}">
-          <h4 class="cms-add-button">Add a Story</h4>
+      <panel title="Companies">
+        <router-link :to="{name: 'addcompany'}">
+          <h4 class="cms-add-button">Add an Event</h4>
         </router-link>
-        <div v-for="story in stories" class="story" :key="story.id">
+        <div v-for="company in companies" class="story" :key="company.id">
           <v-layout>
             <v-flex xs6>
               <div class="story-name">
-                {{ story.name }}
+                {{ company.name }}
               </div>
               <div class="story-quote">
-                {{ story.quote }}
+                {{ company.link }}
+              </div>
+              <div class="company-img">
+                <img :src="company.img" alt="">
               </div>
             </v-flex>
 
             <v-flex xs6>
               <div class="story-para">
-                {{ story.para }}
+                {{ company.para }}
               </div>
             </v-flex>
           </v-layout>
@@ -30,15 +33,15 @@
 </template>
 
 <script>
-import storiesServ from '@/services/storiesServ'
-import panel from '@/components/panel'
+import companiesServ from '@/services/storiesServ'
+import panel from '@/components/cms-panel'
 export default {
   components: {
     panel
   },
   data () {
     return {
-      stories: null
+      companies: null
     }
   },
   methods: {
@@ -47,7 +50,7 @@ export default {
     }
   },
   async mounted () {
-    this.stories = (await storiesServ.index()).data
+    this.companies = (await companiesServ.index()).data
   }
 }
 </script>

@@ -13,6 +13,8 @@ module.exports = (app) => {
 
   app.get('/stories',
     storiesController.index)
+  app.get('/stories/:storyId',
+    storiesController.show)
   app.post('/stories',
     storiesController.post)
 

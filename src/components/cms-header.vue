@@ -6,7 +6,7 @@
       <v-btn v-if="!$store.state.isUserLoggedIn" flat dark @click="navigateTo({name: 'stories'})">Stories</v-btn>
     </v-toolbar-items>
     <v-toolbar-items>
-      <v-btn v-if="!$store.state.isUserLoggedIn" flat dark @click="navigateTo({name: 'companies'})">Companies</v-btn>
+      <v-btn v-if="!$store.state.isUserLoggedIn" flat dark @click="navigateTo({name: 'companies'})">Events</v-btn>
     </v-toolbar-items>
 
     <v-spacer></v-spacer>

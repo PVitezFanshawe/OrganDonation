@@ -1,13 +1,15 @@
 <template>
 <v-layout column>
     <v-flex xs6 offset-xs3 cms-panel>
-      <panel title="Log In">
+      <panel title="Sign Up">
+          <form name="cms-register" autocomplete="off">
             <v-text-field v-model="email" label="Email:"></v-text-field>
-            <v-text-field v-model="password" label="Password:" type="password"></v-text-field>
+            <v-text-field v-model="password" label="Password:" type="password" autocomplete="new-password"></v-text-field>
+          </form>
             <br>
           <div class="error" v-html="error"/>
             <br>
-          <v-btn class="red" @click="login" dark>login</v-btn>
+          <v-btn class="red" @click="register" dark>Register</v-btn>
         </panel>
     </v-flex>
 </v-layout>
@@ -15,12 +17,12 @@
 
 <script>
 import auth from '@/services/auth'
-import panel from '@/components/panel.vue'
+import panel from '@/components/cms-panel'
 export default {
+  name: 'register',
   components: {
     panel
   },
-  name: 'login',
   data () {
     return {
       email: '',
@@ -29,9 +31,9 @@ export default {
     }
   },
   methods: {
-    async login () {
+    async register () {
       try {
-        const response = await auth.login({
+        const response = await auth.register({
           email: this.username,
           password: this.password
         })

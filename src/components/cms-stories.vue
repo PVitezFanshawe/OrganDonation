@@ -8,6 +8,9 @@
         <div v-for="story in stories" class="story" :key="story.id">
           <v-layout>
             <v-flex xs6>
+              <router-link :to="{ name:'sinlgeStory', params: {storyId: story.id}}">
+                <h4 class="cms-edit-button">Edit Story</h4>
+              </router-link>
               <div class="story-name">
                 {{ story.name }}
               </div>
@@ -31,7 +34,7 @@
 
 <script>
 import storiesServ from '@/services/storiesServ'
-import panel from '@/components/panel'
+import panel from '@/components/cms-panel'
 export default {
   components: {
     panel
@@ -62,11 +65,23 @@ export default {
     padding: 15px 5px;
     border-radius: 75px;
     margin: 20px auto;
+    display: block;
+  }
+  .cms-edit-button{
+    height: 75px;
+    width: 75px;
+    background: #f44336;
+    color: #fafafa;
+    text-align: center;
+    padding: 15px 5px;
+    border-radius: 75px;
   }
   .story {
     padding: 20px;
-    height: 200px;
+    height: 250px;
     overflow: hidden;
+    background-color: #efefef;
+    border-bottom: 10px #fff solid;
   }
   .story-name {
     font-size: 2em;
